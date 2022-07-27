@@ -1,0 +1,16 @@
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 92vh;
+  width: 100vw;
+
+  &__event {
+    height: 92vh;
+    width: 100vw;
+  }
+}
+
+.feed-container::-webkit-scrollbar {
+  display: none;
+}
