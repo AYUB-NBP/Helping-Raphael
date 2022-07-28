@@ -1,0 +1,95 @@
+//Overall Background color 
+body {
+    height: 1600px;
+}
+
+#root {
+    background-color: black;
+    height: 100%;
+}
+
+.App {
+    height: 100%;
+}
+
+//Main Container
+.search-container {
+
+    //Menu Container
+    .ui.inverted.menu {
+        justify-content: center;
+        background-color: transparent;
+        margin: 0 2em 1em 2em;
+        padding-top: 1.5em;
+
+        //Search Bar input container
+        .item {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.267);
+            border-radius: 100px;
+
+            input {
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+}
+
+//fix a little line
+
+div.item::before {
+    background: transparent !important;
+}
+
+// Input field Place holder modification
+.input-custom {
+    font-family: sans-serif;
+    font-weight: bolder;
+
+    ::placeholder {
+        color: white;
+        font-weight: bolder;
+    }
+}
+
+//Spacing images up
+.container-custom {
+    display: block;
+    height: 300px;
+    margin: 1.5em 0em;
+}
+
+// Stacking Text over images
+.image-container {
+    position: relative;
+
+    .image-custom {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        margin-bottom: 1em;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .image-content {
+        position: relative;
+        top: 170px;
+        height: 110px;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, .5);
+        opacity: 0.5;
+    }
+
+}
+
+.test {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    margin: 0 1em;
+}
