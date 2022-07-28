@@ -19,8 +19,9 @@ body {
     .ui.inverted.menu {
         justify-content: center;
         background-color: transparent;
-        margin: 0 2em 1em 2em;
         padding-top: 1.5em;
+        margin-left: 1em;
+        margin-right: 1em;
 
         //Search Bar input container
         .item {
@@ -53,20 +54,15 @@ div.item::before {
     }
 }
 
-//Spacing images up
-.container-custom {
-    display: block;
-    height: 300px;
-    margin: 1.5em 0em;
-}
-
 // Stacking Text over images
 .image-container {
     position: relative;
+    height: calc(300px + 1em);
 
     .image-custom {
         object-fit: cover;
-        width: 100%;
+        width: 100vw;
+        //If you change the height , you need to go to Search.js and change the const HorizontalScrollHeight -> Top
         height: 300px;
         border-radius: 20px;
         margin-bottom: 1em;
@@ -76,20 +72,65 @@ div.item::before {
 
     .image-content {
         position: relative;
-        top: 170px;
-        height: 110px;
+        top: 190px; //Controls location of overlaying elements on the main image
+        height: 100px;
         width: 100%;
         margin: 0;
-        z-index: 2;
-        background-color: rgba(0, 0, 0, .5);
-        opacity: 0.5;
-    }
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .6);
+        padding-left: .7em;
+        padding-top: .5em;
 
+        .wrapper {
+            position: relative;
+            top: -60px;
+
+            .date {
+                margin: 0.5em 0;
+                display: block;
+                height: 60px;
+                width: 60px;
+
+                #cap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px 20px 0 0;
+                    background-color: rgb(255, 255, 255);
+                    height: 60%;
+                    width: 100%;
+                    color: black;
+                    font-size: xx-large;
+                }
+
+                #noCap {
+                    color: white;
+                    background-color: rgb(230, 24, 120);
+                    height: 40%;
+                    width: 100%;
+                }
+
+                #cap,
+                #noCap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        h1{
+            font-size: larger;
+        }
+        h1,p{color: white;}
+
+    }
 }
 
-.test {
-    height: 200px;
-    width: 200px;
-    background-color: blue;
-    margin: 0 1em;
+
+.scroll-elements {
+    object-fit: cover;
+    margin-right: 1em;
+    border-radius: 10px;
 }

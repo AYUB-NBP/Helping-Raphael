@@ -13,7 +13,7 @@ export default class Nav extends Component {
 
     return (
       <div>
-          <Menu inverted icon fixed='bottom'  borderless widths={4}
+          <Menu inverted icon fixed='bottom'  borderless widths={5}
             style= {{
               height: '8vh',
               width: '100vw'
@@ -24,9 +24,9 @@ export default class Nav extends Component {
             active={activeItem === 'home icon'}
             onClick={this.handleItemClick}
           >
-          <Link to='/feed'>
-            <Icon name='home' />
-          </Link>
+            <Link to='/feed'>
+              <Icon name='home' />
+            </Link>
           </Menu.Item>
           <Menu.Item
             name='favorite icon'
@@ -45,6 +45,15 @@ export default class Nav extends Component {
           <Link to='/autour-de-moi'>
             <Icon name='search' />
           </Link>
+          </Menu.Item>
+          <Menu.Item
+            name='friends icon'
+            active={activeItem === 'friends icon'}
+            onClick={this.handleItemClick}
+          >
+            <Link to='/mon-compte/amis'>
+              <Icon name='chat' />
+            </Link>
           </Menu.Item>
           <Menu.Item
             name='user profile icon'
