@@ -1,27 +1,16 @@
-//Overall Background color 
-body {
-    height: 1600px;
-}
-
-#root {
-    background-color: black;
-    height: 100%;
-}
-
-.App {
-    height: 100%;
-}
+@import '_properties.scss';
 
 //Main Container
 .search-container {
+    background-color: $background-dark; 
+    height: 105vh;
 
     //Menu Container
     .ui.inverted.menu {
         justify-content: center;
         background-color: transparent;
         padding-top: 1.5em;
-        margin-left: 1em;
-        margin-right: 1em;
+        width: 100%;
 
         //Search Bar input container
         .item {
@@ -57,7 +46,16 @@ div.item::before {
 // Stacking Text over images
 .image-container {
     position: relative;
-    height: calc(300px + 1em);
+    height: 300px;
+
+    //heart ♥
+    i {
+        position: relative;
+        color: white;
+        z-index: 1;
+        left: 80%;
+        top: 33%;
+    }
 
     .image-custom {
         object-fit: cover;
@@ -65,7 +63,6 @@ div.item::before {
         //If you change the height , you need to go to Search.js and change the const HorizontalScrollHeight -> Top
         height: 300px;
         border-radius: 20px;
-        margin-bottom: 1em;
         position: absolute;
         z-index: 0;
     }
@@ -120,17 +117,56 @@ div.item::before {
             }
         }
 
-        h1{
+        h1 {
             font-size: larger;
         }
-        h1,p{color: white;}
+
+        h1,
+        p {
+            color: white;
+        }
 
     }
 }
 
+// Heading
+.heading {
+    margin: 1em 0 0.75em 0;
+}
 
-.scroll-elements {
-    object-fit: cover;
+
+//Carousel 
+
+.scroll-horizontal {
+    margin: auto;
+}
+
+//carousel Cards
+.cards {
+    border-radius: 15px;
     margin-right: 1em;
-    border-radius: 10px;
+
+
+}
+
+//Carousel Cards images
+.scroll-images {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px !important;
+}
+
+// Text on Cards
+.labelName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba($color: #000000, $alpha: 0.5);
+    height: 30%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    top: -14vw;
+    z-index: 3;
 }
